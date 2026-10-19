@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三鑫总公司 · 管理中心</title>
+  <link rel="icon" href="data:," />
+  
+  
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <button id="navOverlay" class="nav-overlay" aria-label="关闭导航" tabindex="-1" hidden></button>
+  <div class="shell">
+    <aside class="sidebar" id="mainSidebar" aria-label="三鑫总公司模块导航">
+      <div class="brand"><div class="brand-mark">三</div><div><strong>三鑫总公司</strong><span>统一资料 · 工厂管理</span></div></div>
+      <div>
+        <div class="nav-label">工作台</div>
+        <nav class="nav">
+          <button class="active" data-view="dashboard"><span class="icon">⌂</span><span>总公司总览</span></button>
+          <button data-view="factories"><span class="icon">▦</span><span>工厂与仓库</span></button>
+          <button data-view="people"><span class="icon">♙</span><span>人员管理</span></button>
+          <button data-view="goods"><span class="icon">▤</span><span>货物档案</span></button>
+          <button data-view="materials"><span class="icon">◫</span><span>物料档案</span></button>
+          <button data-view="inventory"><span class="icon">↔</span><span>库存流水</span></button>
+        </nav>
+      </div>
+      <div>
+        <div class="nav-label">预留模块</div>
+        <nav class="nav">
+          <button data-view="purchase"><span class="icon">◌</span><span>采购管理</span><small>预留</small></button>
+          <button data-view="production"><span class="icon">◎</span><span>生产管理</span><small>预留</small></button>
+          <button data-view="finance"><span class="icon">▧</span><span>财务票税</span><small>预留</small></button>
+          <button data-view="equipment"><span class="icon">⚙</span><span>设备管理</span><small>预留</small></button>
+          <button data-view="projects"><span class="icon">◇</span><span>项目管理</span><small>预留</small></button>
+        </nav>
+      </div>
+      <div class="sidebar-bottom"><div class="user-mini"><div class="avatar">三</div><div><b>本机资料工作台</b><span>资料整理版 · 本地保存</span></div></div></div>
+    </aside>
+    <main>
+      <header class="topbar"><button id="menuToggle" class="menu-toggle" aria-label="打开导航" aria-controls="mainSidebar" aria-expanded="false">☰</button><div class="crumb"><span>三鑫总公司</span><span>　/　</span><b id="crumbName">总公司总览</b></div><div class="top-actions"><span class="last-sync">正在读取本地资料</span><button class="primary" id="quickAdd">＋ 新增记录</button></div></header>
+      <section class="content">
+        <div id="dashboard" class="view active">
+          <div class="hero"><div><h1>总公司管理中心</h1><p class="subtitle">从总公司统一查看组织、人员、仓库及货物物料，随时更新和查询资料。</p></div><span class="date-chip"></span></div>
+          <div class="stats">
+            <div class="stat"><div class="stat-top"><span>管理工厂</span><span class="stat-icon">▦</span></div><strong>—</strong><small>正在读取资料</small></div>
+            <div class="stat"><div class="stat-top"><span>在岗人员</span><span class="stat-icon">♙</span></div><strong>—</strong><small>正在读取资料</small></div>
+            <div class="stat"><div class="stat-top"><span>货物库存</span><span class="stat-icon">▤</span></div><strong>—</strong><small>正在读取资料</small></div>
+            <div class="stat"><div class="stat-top"><span>物料库存</span><span class="stat-icon">◫</span></div><strong>—</strong><small class="warn">正在读取资料</small></div>
+          </div>
+          <div class="grid">
+            <section class="panel"><div class="panel-head"><h2>库存变化</h2><button class="text-btn">查看流水 →</button></div><div class="panel-body"><div class="chart"><svg viewBox="0 0 720 210" preserveAspectRatio="none"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#246bfe" stop-opacity=".18"/><stop offset="1" stop-color="#246bfe" stop-opacity="0"/></linearGradient></defs><line x1="0" y1="32" x2="720" y2="32" class="chart-grid"/><line x1="0" y1="88" x2="720" y2="88" class="chart-grid"/><line x1="0" y1="144" x2="720" y2="144" class="chart-grid"/><path class="chart-fill" d="M0,132 C48,126 62,115 100,119 S160,93 202,106 S258,121 300,88 S349,110 400,78 S466,83 510,56 S563,76 605,48 S671,55 720,30 L720,190 L0,190 Z"/><path class="chart-line" d="M0,132 C48,126 62,115 100,119 S160,93 202,106 S258,121 300,88 S349,110 400,78 S466,83 510,56 S563,76 605,48 S671,55 720,30"/><g class="chart-label"><text x="0" y="207">10/04</text><text x="112" y="207">10/05</text><text x="224" y="207">10/06</text><text x="336" y="207">10/07</text><text x="448" y="207">10/08</text><text x="560" y="207">10/09</text><text x="670" y="207">10/10</text></g></svg></div><div class="legend"><span><i></i>库存总量</span><span><i class="green"></i>有效库存率 96.4%</span></div></div></section>
+            <section class="panel"><div class="panel-head"><h2>数据健康度</h2><button class="text-btn">查看异常 →</button></div><div class="panel-body"><div class="health-row"><div><div class="health-title">基础档案完整度 <span>工厂 / 人员 / 物品</span></div><div class="bar"><span style="width:82%"></span></div></div><b>82%</b></div><div class="health-row"><div><div class="health-title">库存更新及时率 <span>近 30 天</span></div><div class="bar"><span style="width:96%;background:var(--green)"></span></div></div><b>96%</b></div><div class="health-row"><div><div class="health-title">单据待处理 <span>需要负责人处理</span></div><div class="bar"><span style="width:24%;background:var(--amber)"></span></div></div><b class="warn">8 条</b></div></div></section>
+          </div>
+          <section class="panel" style="margin-bottom:18px"><div class="panel-head"><h2>最近库存动态</h2><button class="text-btn" data-view-link="inventory">全部流水 →</button></div><div class="table-wrap"><table><thead><tr><th>时间</th><th>单据编号</th><th>仓库</th><th>物品</th><th>类型</th><th>数量</th><th>经办人</th></tr></thead><tbody></tbody></table></div></section>
+          <section class="panel"><div class="panel-head"><h2>系统模块</h2><span style="color:var(--muted);font-size:12px">按阶段启用</span></div><div class="module-grid"><div class="module"><div class="module-icon">▦</div><div><b>工厂与仓库</b><span>4 个工厂 · 8 个仓库</span></div></div><div class="module"><div class="module-icon">♙</div><div><b>人员管理</b><span>86 人 · 4 个岗位组</span></div></div><div class="module"><div class="module-icon">▤</div><div><b>货物档案</b><span>128 个品类</span></div></div><div class="module"><div class="module-icon">◫</div><div><b>物料档案</b><span>342 个品类</span></div></div><div class="module"><div class="module-icon">↔</div><div><b>库存流水</b><span>今日 18 笔更新</span></div></div><div class="module"><div class="module-icon">⌁</div><div><b>采购管理</b><span>即将启用</span></div></div><div class="module"><div class="module-icon">◎</div><div><b>生产管理</b><span>即将启用</span></div></div><div class="module"><div class="module-icon">⚙</div><div><b>设备与项目</b><span>即将启用</span></div></div></div></section>
+        </div>
+        <div id="factories" class="view"><div class="hero"><div><h1>工厂与仓库</h1><p class="subtitle">管理组织、仓库和负责人资料。</p></div><button class="primary" id="addFactory">＋ 新增工厂</button></div><div class="toolbar"><input class="search" placeholder="搜索工厂、仓库或负责人" data-filter="factoryTable"><select class="select"><option>全部状态</option><option>运行中</option><option>待接入</option></select></div><section class="panel"><div class="table-wrap"><table id="factoryTable"><thead><tr><th>工厂名称</th><th>所在地</th><th>负责人</th><th>仓库数</th><th>人员数</th><th>状态</th><th>最近更新</th></tr></thead><tbody></tbody></table></div></section></div>
+        <div id="people" class="view"><div class="hero"><div><h1>人员管理</h1><p class="subtitle">统一维护人员、岗位和所属单位。</p></div><button class="primary" id="addPerson">＋ 新增人员</button></div><div class="toolbar"><input class="search" placeholder="搜索姓名、岗位或工厂" data-filter="peopleTable"><select class="select"><option>全部工厂</option><option>三鑫一厂</option><option>三鑫二厂</option></select></div><section class="panel"><div class="table-wrap"><table id="peopleTable"><thead><tr><th>姓名</th><th>岗位</th><th>所属单位</th><th>联系方式</th><th>权限组</th><th>状态</th></tr></thead><tbody></tbody></table></div></section></div>
+        <div id="goods" class="view"><div class="hero"><div><h1>货物档案</h1><p class="subtitle">成品、半成品和外购商品统一编码管理。</p></div><button class="primary">＋ 新增货物</button></div><div class="toolbar"><input class="search" placeholder="搜索名称、编码或规格" data-filter="goodsTable"><select class="select"><option>全部类别</option><option>成品</option><option>半成品</option><option>外购商品</option></select></div><section class="panel"><div class="table-wrap"><table id="goodsTable"><thead><tr><th>物品编码</th><th>名称</th><th>规格</th><th>类别</th><th>单位</th><th>库存总量</th><th>安全库存</th></tr></thead><tbody></tbody></table></div></section></div>
+        <div id="materials" class="view"><div class="hero"><div><h1>物料档案</h1><p class="subtitle">原材料和辅料统一建立编码、规格和安全库存。</p></div><button class="primary">＋ 新增物料</button></div><div class="toolbar"><input class="search" placeholder="搜索名称、编码或规格" data-filter="materialsTable"><select class="select"><option>全部类别</option><option>原材料</option><option>辅料</option><option>设备工具</option></select></div><section class="panel"><div class="table-wrap"><table id="materialsTable"><thead><tr><th>物料编码</th><th>名称</th><th>规格</th><th>类别</th><th>单位</th><th>库存总量</th><th>安全库存</th><th>状态</th></tr></thead><tbody></tbody></table></div></section></div>
+        <div id="inventory" class="view"><div class="hero"><div><h1>库存流水</h1><p class="subtitle">所有入库、出库、调拨和盘点记录都在这里追溯。</p></div><button class="primary" id="addFlow">＋ 登记流水</button></div><div class="toolbar"><input class="search" placeholder="搜索单据、仓库或物品" data-filter="inventoryTable"><select class="select"><option>全部类型</option><option>入库</option><option>出库</option><option>调拨</option><option>盘点</option></select></div><section class="panel"><div class="table-wrap"><table id="inventoryTable"><thead><tr><th>单据编号</th><th>时间</th><th>仓库</th><th>物品</th><th>类型</th><th>数量</th><th>经办人</th><th>状态</th></tr></thead><tbody></tbody></table></div></section></div>
+        <div id="reserved" class="view"><div class="hero"><div><h1>预留模块</h1><p class="subtitle">采购、生产、财务、设备和项目模块将在基础数据稳定后逐步启用。</p></div></div><section class="panel"><div class="empty-note">模块入口已预留。当前阶段优先完成基础档案与库存数据的建立、更新和查询。</div></section></div>
+      </section>
+    </main>
+  </div>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
